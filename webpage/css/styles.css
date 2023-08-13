@@ -1,192 +1,182 @@
+/* @import url("https://fonts.googleapis.com/css2?family=Bagel+Fat+One&family=Damion&family=Monoton&display=swap"); */
+@import url("https://fonts.googleapis.com/css2?family=Bagel+Fat+One&family=Damion&family=Fugaz+One&family=Monoton&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bagel+Fat+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bagel+Fat+One&family=Damion&display=swap");
+
 * {
-  margin: 0;
+	margin: 0;
 }
 
-html, body {
-  height: 100%;
-}
-
-html {
-  margin: 0;
-  padding: 0;
-  font-family: "Helvetica Neue", Roboto, Arial, sans-serif;
-  font-size: 62.5%;
-  color: white;
-  background: linear-gradient(to bottom, #2473ab 0%,#1e528e 70%,#5b7983 100%);
+html,
+body {
+	height: 100%;
 }
 
 body {
-  font-size: 1.8rem;
+	background-image: url(../img/thaddaeus-lim-RBthQZJd_vU-unsplash.jpg);
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+}
+.navbar-brand {
+	/* font-family: "Bagel Fat One", cursive;
+	font-family: "Damion", cursive;
+	font-family: "Monoton", cursive; */
+	font-family: "Bagel Fat One", cursive;
+	font-family: "Damion", cursive;
+	font-family: "Fugaz One", cursive;
+	font-family: "Monoton", cursive;
 }
 
-h1, h2, h3 {
-  font-weight: normal;
+.jumbotron {
+	position: relative;
 }
 
-h1 {
-  font-size: 3.5rem;
-  margin-bottom: 0.5rem;
+.jumbH1 {
+	position: absolute;
+	top: 100px;
+	color: white;
+	font-family: "Bagel Fat One", cursive;
 }
 
-a {
-  color: white;
-  text-decoration: none;
+.jumbP {
+	position: absolute;
+	right: 280px;
+	bottom: 5px;
+	/* top: 260px; */
+	color: white;
+	font-family: "Bagel Fat One", cursive;
+	font-family: "Damion", cursive;
+	font-size: 1.5rem;
 }
 
-.wrapper {
-  min-height: 100%;
-  height: auto !important;
-  height: 100%;
-  margin: 0 auto -7rem;
-  position: relative;
+.jumbotron {
+	background-image: url(../img/marcin-jozwiak-oh0DITWoHi4-unsplash.jpg);
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	padding: 8rem 2rem;
 }
 
-footer, .push {
-  height: 7rem;
+.about {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background-color: rgba(240, 248, 255, 0.767);
 }
 
-footer .footer-contents {
-  padding: 0 5rem;
-  position: relative;
+.about p {
+	font-size: 1.25rem;
+	font-weight: 500;
 }
 
-.website-nav {
-  position: relative;
-  padding: 5rem;
+@media only screen and (min-width: 1241px) {
+	#genContainer {
+		max-width: 75% !important;
+	}
 }
 
-.website-nav ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
+@media only screen and (min-width: 1025px) and (max-width: 1240px) {
+	#genContainer {
+		max-width: 85% !important;
+	}
 }
 
-.website-nav ul li {
-  float: left;
-  padding: 0.5rem 2rem 0.5rem 0;
-  line-height: 21px;
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+	#genContainer {
+	}
 }
 
-.website-nav ul li a {
-  color: white;
-  text-decoration: none;
+@media only screen and (min-width: 426px) and (max-width: 768px) {
+	#genContainer {
+	}
 }
 
-.home-link {
-  font-weight: bold;
+@media only screen and (max-width: 425px) {
+	#genContainer {
+	}
 }
 
-.message {
-  position: relative;
-  padding: 0 5rem;
-  margin-bottom: 3rem;
-  width: auto;
+/* carousel */
+* {
+	padding: 0px;
+	margin: 0px;
+	box-sizing: border-box;
 }
 
-.message .twitter-link {
-  float: left;
-  margin-right: 20px;
+.carousel-frame {
+	position: relative;
+	width: 80%;
+	height: min(calc(90vh - 10px), 350px);
+	margin: 10px auto;
+	overflow: hidden;
+	box-shadow: inset 60px 0px 60px -60px rgb(0, 0, 0),
+		inset -60px 0px 60px -60px rgb(0, 0, 0);
+	background-image: radial-gradient(
+		circle,
+		transparent,
+		transparent 75%,
+		rgba(0, 0, 0, 0.3)
+	);
+	background-color: white;
 }
 
-.message .twitter-link img {
-  width: 40px;
-  height: 40px;
+.carousel-slide {
+	display: flex;
+	width: 100%;
+	height: 100%;
+	mix-blend-mode: multiply;
 }
 
-.message .text {
-  float: left;
+.carousel-slide img {
+	min-width: 100%;
+	object-fit: cover;
 }
 
-.message:after, .website-nav:after {
-  content: " ";
-  display: table;
-  clear: both;
+.carousel-prev {
+	position: absolute;
+	top: 50%;
+	left: 30px;
+	margin-top: -15px;
+	z-index: 10;
+	font-size: 30px;
+	color: rgba(255, 255, 255, 0.8);
+	cursor: pointer;
 }
 
-.graphics {
-  display: none;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  margin-bottom: 0;
+.carousel-next {
+	position: absolute;
+	top: 50%;
+	right: 30px;
+	margin-top: -15px;
+	z-index: 10;
+	font-size: 30px;
+	color: rgba(255, 255, 255, 0.8);
+	cursor: pointer;
 }
 
-.graphics .tower svg {
-  width: calc(100vw);
-  height: calc(90vh);
+.carousel-dots {
+	list-style: none;
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 5%;
+	margin: 0 auto;
+	width: max(100px, 15%);
+	display: flex;
+	justify-content: space-between;
 }
 
-.graphics .cloud {
-  top: 30rem;
-  position: relative;
+.carousel-dots li {
+	width: 8px;
+	height: 8px;
+	border: 1px solid rgba(255, 255, 255, 0.8);
+	border-radius: 50%;
+	cursor: pointer;
+	box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
 }
 
-.page-content {
-  padding: 1rem 5rem;
-}
-
-.page-content p {
-  margin-bottom: 1rem;
-}
-
-.path {
-  stroke-dasharray: 4000;
-  stroke-dashoffset: 4000;
-  animation: dash 5s linear forwards;
-}
-
-@keyframes dash {
-  to {
-    stroke-dashoffset: 0;
-  }
-}
-
-@media (min-height: 500px) and (min-width: 700px) {
-  .message {
-    padding: 0;
-    width: 50%;
-    left: calc(50vw - 5rem);
-    top: calc(15vh - 5rem);
-  }
-
-  .message .text {
-    padding-right: 0rem;
-  }
-
-  .graphics {
-    display: block;
-    margin-bottom: 6rem;
-  }
-
-  .message .twitter-link img {
-    width: 70%;
-    height: 70%;
-  }
-
-  .page-content {
-    padding: 3rem 5rem;
-  }
-
-}
-
-@media (min-height: 500px) and (min-width: 1240px) {
-  .message {
-    left: calc(50vw - 10rem);
-    top: calc(25vh - 5rem);
-  }
-
-  h1 {
-    font-size: 5rem;
-  }
-
-  .message .twitter-link img {
-    width: 80%;
-    height: 80%;
-  }
-}
-
-@media (min-aspect-ratio: 11/5)  {
-  .graphics {
-    display: none;
-  }
+.carousel-dots .active-dot {
+	background-color: rgba(255, 255, 255, 0.8);
 }
